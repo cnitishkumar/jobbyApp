@@ -1,0 +1,126 @@
+.jobs-route-container {
+  background-color: #000000;
+  padding: 20px;
+  display: flex;
+  height: auto;
+}
+
+.job-filters-sections {
+  width: 300px;
+  margin-right: 40px;
+}
+.search-input-container-mobile {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  display: none;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.search-input-container-desktop {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  background-color: transparent;
+  height: 40px;
+  border-radius: 10px;
+  width: 200%;
+  max-width: 400px;
+}
+.job-search-input {
+  flex-grow: 1;
+  background-color: transparent;
+  outline: none;
+  margin: 0px;
+  border-width: 0px;
+  color: #f1f5f9;
+  height: 100%;
+  font-size: medium;
+  font-weight: 500;
+}
+.search-btn {
+  margin: 0px;
+  background-color: #272727;
+  outline: none;
+  border-width: 0px;
+  cursor: pointer;
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.search-icon {
+  color: #cbd5e1;
+  font-size: medium;
+  font-weight: 500;
+  width: 40px;
+}
+.jobs-failure-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  margin-top: auto;
+}
+.jobs-failure-image {
+  width: 70%;
+  max-width: 600px;
+  margin: 10px;
+}
+.failure-heading {
+  font-weight: bold;
+  color: #f8fafc;
+  font-size: xx-large;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.failure-description {
+  font-weight: bold;
+  color: #cbd5e1;
+  font-size: medium;
+  text-align: center;
+}
+.jobs-view-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+.jobs-ul-el {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 576px) {
+  .jobs-route-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 30px;
+  }
+  .job-filters-sections {
+    width: 100%;
+  }
+  .search-input-container-mobile {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cbd5e1;
+    width: 100%;
+    order: -1;
+    margin-bottom: 20px;
+    height: 37px;
+    padding: 0px;
+  }
+  .search-input-container-desktop {
+    display: none;
+  }
+}

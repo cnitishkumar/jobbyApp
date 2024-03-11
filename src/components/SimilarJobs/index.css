@@ -1,0 +1,25 @@
+.similar-job-description {
+  font-size: medium;
+  color: #ffffff;
+}
+.description-heading {
+  color: #ffffff;
+  font-family: 'Roboto';
+}
+.similar-job-li-el {
+  list-style: none;
+  background-color: #202020;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px;
+  max-width: 300px;
+}
+.similar-job-rating {
+  color: #ffffff;
+  font-size: medium;
+  margin-left: 5px;
+}
+.similar-job-footer-container {
+  display: flex;
+}

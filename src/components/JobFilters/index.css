@@ -1,0 +1,23 @@
+.filters-list {
+  list-style: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.filters-ul-el {
+  margin: 0px;
+  padding: 0px;
+}
+.filters-ul-el {
+  color: #f8fafc;
+  font-size: medium;
+  font-family: 'Roboto';
+  margin-left: 4px;
+  font-weight: 500;
+}
+.filters-heading {
+  color: #f8fafc;
+  font-size: medium;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
