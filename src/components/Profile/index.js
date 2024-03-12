@@ -62,7 +62,7 @@ class Profile extends Component {
         <div>
           <img src={profileImageUrl} alt="profile" className="profile-image" />
         </div>
-        <p className="profile-name">{name}</p>
+        <h1 className="profile-name">{name}</h1>
         <p className="profile-bio">{shortBio}</p>
       </div>
     )

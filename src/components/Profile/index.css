@@ -23,6 +23,7 @@
   background-size: cover;
   padding: 15px;
   border-radius: 30px;
+  border: #7e858e solid 1px;
 }
 .profile-name {
   color: #6366f1;

@@ -1,11 +1,12 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
+
 import {Redirect} from 'react-router-dom'
 
 import './index.css'
 
 class Login extends Component {
-  state = {username: '', password: '', showErrMsg: false}
+  state = {username: '', password: '', showErrMsg: false, showPassword: false}
 
   onChangeUsername = event => {
     this.setState({username: event.target.value})
@@ -43,12 +44,19 @@ class Login extends Component {
     }
   }
 
+  showHidePassword = () => {
+    this.setState(prevState => ({showPassword: !prevState.showPassword}))
+  }
+
   render() {
-    const {username, password, showErrMsg, errorMsg} = this.state
+    const {username, password, showErrMsg, errorMsg, showPassword} = this.state
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
     }
+
+    const inputType = showPassword ? 'text' : 'password'
+    const showHideBtnText = showPassword ? 'Hide' : 'Show'
 
     return (
       <div className="app-container">
@@ -79,14 +87,26 @@ class Login extends Component {
             <label htmlFor="password" className="label-el">
               PASSWORD
             </label>
-            <input
-              type="password"
-              className="input-el"
-              placeholder="Password"
-              id="password"
-              value={password}
-              onChange={this.onChangePassword}
-            />
+            <div className="password-container">
+              <input
+                type={inputType}
+                className="password-input"
+                placeholder="Password"
+                id="password"
+                value={password}
+                onChange={this.onChangePassword}
+              />
+              <button
+                type="button"
+                className="password-show-hide-btn"
+                onClick={this.showHidePassword}
+              >
+                {showHideBtnText}
+              </button>
+            </div>
+            <p className="password-hint">Username : rahul</p>
+            <p className="password-hint">Password : rahul@2021</p>
+
             <button type="submit" className="login-button">
               Login
             </button>

@@ -27,8 +27,47 @@
   justify-self: center;
   align-self: center;
   padding: 30px;
-  border-radius: 10px;
+  content: '';
+  position: relative;
+  inset: 0;
+  border: 1px solid transparent;
+  animation: animateBorder 4s linear infinite;
+  border-radius: 20px;
 }
+
+@keyframes animateBorder {
+  0% {
+    border-top-color: red;
+    border-right-color: yellow;
+    border-bottom-color: blue;
+    border-left-color: green;
+  }
+  25% {
+    border-top-color: yellow;
+    border-right-color: blue;
+    border-bottom-color: green;
+    border-left-color: red;
+  }
+  50% {
+    border-top-color: blue;
+    border-right-color: green;
+    border-bottom-color: red;
+    border-left-color: yellow;
+  }
+  75% {
+    border-top-color: green;
+    border-right-color: red;
+    border-bottom-color: yellow;
+    border-left-color: blue;
+  }
+  100% {
+    border-top-color: red;
+    border-right-color: yellow;
+    border-bottom-color: blue;
+    border-left-color: green;
+  }
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -45,7 +84,9 @@
   font-size: medium;
   border-radius: 5px;
   color: #f8fafc;
+  flex-grow: 1;
 }
+
 .label-el {
   color: #f8fafc;
   margin-top: 5px;
@@ -53,7 +94,29 @@
   font-size: small;
   font-weight: 500;
 }
-
+.password-container {
+  width: 100%;
+  border: 1px solid #b6c5ff;
+  background-color: transparent;
+  margin-top: 4px;
+  padding: 0px;
+  border-radius: 5px;
+}
+.password-input {
+  background-color: transparent;
+  outline: none;
+  margin-bottom: 10px;
+  margin: 0px;
+  color: #475569;
+  padding: 5px;
+  font-size: medium;
+  border-radius: 5px;
+  color: #f8fafc;
+  flex-grow: 1;
+  outline: none;
+  border: 0px;
+  width: 85%;
+}
 .login-button {
   background-color: #6366f1;
   outline: none;
@@ -72,7 +135,16 @@
   color: #ff0b37;
   font-size: small;
 }
-
+.password-hint {
+  color: #ffffff;
+  font-size: small;
+  margin: 0px;
+}
+.password-show-hide-btn {
+  border-radius: 5px;
+  border-width: 0px;
+  cursor: pointer;
+}
 @media screen and (max-width: 576px) {
   .login-container {
     width: 90%;

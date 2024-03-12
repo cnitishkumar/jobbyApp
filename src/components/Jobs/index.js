@@ -44,7 +44,7 @@ class Jobs extends Component {
       },
       method: 'GET',
     }
-    console.log(jobsApi)
+
     const response = await fetch(jobsApi, options)
 
     const getFormattedData = data => {
@@ -118,6 +118,12 @@ class Jobs extends Component {
       this.getJobsData()
     }
 
+    const onPressEnter = event => {
+      if (event.key === 'Enter') {
+        this.getJobsData()
+      }
+    }
+
     return (
       <>
         <input
@@ -125,6 +131,7 @@ class Jobs extends Component {
           className="job-search-input"
           value={searchInput}
           onChange={onChangeSearchInput}
+          onKeyDown={onPressEnter}
         />
         <button
           type="button"
@@ -214,7 +221,6 @@ class Jobs extends Component {
 
   render() {
     const {salaryRange, employmentType, searchInput} = this.state
-    console.log(salaryRange)
 
     return (
       <>

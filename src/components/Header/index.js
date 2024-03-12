@@ -33,16 +33,14 @@ const Header = props => {
               Jobs
             </Link>
           </li>
-          <li className="nav-li-el-button">
-            <button
-              type="button"
-              className="nav-logout-button-desktop"
-              onClick={onClickLogoutBtn}
-            >
-              Logout
-            </button>
-          </li>
         </ul>
+        <button
+          type="button"
+          className="nav-logout-button-desktop"
+          onClick={onClickLogoutBtn}
+        >
+          Logout
+        </button>
       </div>
     </nav>
   )
